@@ -13,6 +13,7 @@ import WatercolourPainting from "../components/pages/category/WatercolourPaintin
 import OilPainting from "../components/pages/category/OilPainting";
 import CharcoalSketching from "../components/pages/category/CharcoalSketching";
 import CartoonDrawing from "../components/pages/category/CartoonDrawing";
+import ArtDetails from "../components/pages/artCard/ArtDetails";
 
 
 
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
           path: "/cartoonDrawing",
           element: <CartoonDrawing></CartoonDrawing>,
           
+        },
+        {
+          path: "/art/:id",
+          element: <ArtDetails></ArtDetails>,
         },
           
         

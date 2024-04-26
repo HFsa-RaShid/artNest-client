@@ -1,11 +1,13 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { Helmet } from "react-helmet";
 import Swal from 'sweetalert2'
 import 'sweetalert2/src/sweetalert2.scss'
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddCraft = () => {
 
     const formRef = useRef(null);
+    const { user } = useContext(AuthContext);
 
     const handleAddArt = e =>{
         e.preventDefault();
@@ -16,11 +18,12 @@ const AddCraft = () => {
         const description = form.description.value;
         const price = form.price.value;
         const rating = form.rating.value;
+        const stock_status = form.stock_status.value;
         const customization = form.customization.value;
         const processing_time = form.processing_time.value;
         const user_email = form.user_email.value;
         const user_name = form.user_name.value;
-        const newAddArt = {image_url,item_name,subcategory_name,description,price,rating,customization,processing_time,user_email,user_name}
+        const newAddArt = {image_url,item_name,subcategory_name,description,price,rating,customization,processing_time,user_email,user_name,stock_status}
         console.log(newAddArt);
 
         // send data to the server
@@ -191,6 +194,7 @@ const AddCraft = () => {
                         name="user_email"
                         type="email"
                         placeholder="User Email"
+                        value={user?.email || ""}
                         required
                       />
                     </div>
@@ -203,6 +207,7 @@ const AddCraft = () => {
                         name="user_name"
                         type="text"
                         placeholder="User Name"
+                        value={user?.displayName || ""}
                         required
                       />
                     </div>
