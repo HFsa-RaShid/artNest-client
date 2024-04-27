@@ -14,6 +14,7 @@ import OilPainting from "../components/pages/category/OilPainting";
 import CharcoalSketching from "../components/pages/category/CharcoalSketching";
 import CartoonDrawing from "../components/pages/category/CartoonDrawing";
 import ArtDetails from "../components/pages/artCard/ArtDetails";
+import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
 
 
 
@@ -87,6 +88,11 @@ export const router = createBrowserRouter([
         {
           path: "/art/:id",
           element: <ArtDetails></ArtDetails>,
+        },
+        {
+          path: "/updateArt/:id",
+          element: <UpdateMyArt></UpdateMyArt>,
+          
         },
           
         

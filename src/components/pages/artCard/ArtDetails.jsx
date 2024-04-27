@@ -3,10 +3,7 @@ import {  useParams } from "react-router-dom";
 
 
 const ArtDetails = () => {
-    // const arts = useLoaderData();
     const {id} = useParams();
-    // const idInt = parseInt(id);
-    // const art = arts.find(art => art._id === idInt);
     console.log(id);
     const [art,setArt] = useState({});
 
