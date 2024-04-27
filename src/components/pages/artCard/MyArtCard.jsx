@@ -32,8 +32,7 @@ const MyArtCard = ({item}) => {
                         text: "Your Art has been deleted.",
                         icon: "success"
                       });
-                      
-
+ 
                 }
               })
             }

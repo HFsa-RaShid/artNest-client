@@ -9,15 +9,17 @@ const UpdateMyArt = () => {
     const {id} = useParams();
     console.log(id);
     const [art,setArt] = useState({});
+    const [control,setControl] =useState(false);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/art/${id}`)
+        fetch(`http://localhost:5000/arts/${id}`)
         .then(res => res.json())
         .then(data => {
-            setArt(data)
-            console.log(data);
+            setArt(data);
+            setControl(data);
+            // console.log(data);
         })
-    },[id])
+    },[id,control])
 
     const formRef = useRef(null);
 
@@ -33,9 +35,7 @@ const UpdateMyArt = () => {
         const stock_status = form.stock_status.value;
         const customization = form.customization.value;
         const processing_time = form.processing_time.value;
-        const user_email = form.user_email.value;
-        const user_name = form.user_name.value;
-        const updatedArt = {image_url,item_name,subcategory_name,description,price,rating,customization,processing_time,user_email,user_name,stock_status}
+        const updatedArt = {image_url,item_name,subcategory_name,description,price,rating,customization,processing_time,stock_status}
         console.log(updatedArt);
 
         // send data to the server
@@ -49,8 +49,9 @@ const UpdateMyArt = () => {
         })
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
+            // console.log(data);
             if(data.modifiedCount > 0){
+                setControl(!control)
                 Swal.fire({
                     title: "Success!",
                     text: "Art Updated Successfully",
@@ -114,10 +115,10 @@ const UpdateMyArt = () => {
                         <select
                             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                             name="subcategory_name"
-                            defaultValue={art.subcategory_name}
+                            
                             required
                         >
-                            <option value="">Select Subcategory</option>
+                            <option value="">{art.subcategory_name}</option>
                             <option value="Landscape Painting">Landscape Painting</option>
                             <option value="Portrait Drawing">Portrait Drawing</option>
                             <option value="Watercolour Painting">Watercolour Painting</option>
