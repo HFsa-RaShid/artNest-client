@@ -15,7 +15,9 @@ import CharcoalSketching from "../components/pages/category/CharcoalSketching";
 import CartoonDrawing from "../components/pages/category/CartoonDrawing";
 import ArtDetails from "../components/pages/artCard/ArtDetails";
 import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
-import HomeCards from "../components/pages/homeSections/HomeCards";
+
+import AllExhibitionCards from "../components/pages/homeSections/AllExhibitionCards";
+
 
 
 
@@ -95,6 +97,10 @@ export const router = createBrowserRouter([
           path: "/updateArt/:id",
           element: <UpdateMyArt></UpdateMyArt>,
           
+        },
+        {
+          path: "/allExhibitionCard",
+          element: <AllExhibitionCards></AllExhibitionCards>
         },
           
         
