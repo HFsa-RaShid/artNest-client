@@ -15,6 +15,7 @@ import CharcoalSketching from "../components/pages/category/CharcoalSketching";
 import CartoonDrawing from "../components/pages/category/CartoonDrawing";
 import ArtDetails from "../components/pages/artCard/ArtDetails";
 import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
+import HomeCards from "../components/pages/homeSections/HomeCards";
 
 
 
@@ -45,6 +46,7 @@ export const router = createBrowserRouter([
             element: <AllArt></AllArt>,
             loader: () => fetch('http://localhost:5000/art')
         },
+        
         {
             path: "/addCraft",
             element: <AddCraft></AddCraft>,

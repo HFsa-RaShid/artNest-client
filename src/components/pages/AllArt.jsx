@@ -10,6 +10,7 @@ const AllArt = () => {
                 arts.map(art => <Art key={art._id} art={art}></Art>)
             }
             
+           
         </div>
     );
 };

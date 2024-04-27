@@ -6,7 +6,7 @@ const Art = ({art}) => {
     
     return (
         <div className="card  shadow-xl bg-slate-200">
-                <figure className="px-8 pt-10 w-full h-[280px]">
+                <figure className="px-6 pt-6 w-full h-[280px]">
                     <img src={image_url} className="rounded-xl h-full w-full" />
                 </figure>
                 <div className="card-body ">

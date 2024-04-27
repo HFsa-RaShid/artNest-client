@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate} from "react-router-dom";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import registerBackground from '../../assets/image/bg.jpg'
+import registerBackground from '../../assets/image/slide5.jpg'
 import { updateProfile } from "firebase/auth";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import 'animate.css';
@@ -77,7 +77,7 @@ const Register = () => {
             
                 <h1 className="text-4xl font-bold text-white">Register Here!</h1>
             
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-70">
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-black opacity-95 border">
                     <form className="card-body " onSubmit={handleRegister} >
                         <div className="form-control">
                             <label className="label">

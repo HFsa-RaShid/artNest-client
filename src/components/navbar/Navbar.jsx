@@ -33,8 +33,8 @@ const Navbar = () => {
                 <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-semibold text-[18px] animate__animated animate__fadeInDown text-black">
               <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to='/allArt'>All Art & Craft</NavLink></li>
-              <li><NavLink to='/addCraft'>Add Craft</NavLink></li>
-              <li><NavLink to='/myCraft'>My Craft</NavLink></li>
+              <li><NavLink to='/addCraft'>Add Art</NavLink></li>
+              <li><NavLink to='/myCraft'>My Art</NavLink></li>
               <li>
               <details>
                 <summary>Category</summary>
@@ -61,8 +61,8 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1  flex flex-col lg:flex-row font-semibold text-[18px] animate__animated animate__fadeInDown">
             <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/allArt'>All Art & Craft</NavLink></li>
-            <li><NavLink to='/addCraft'>Add Craft</NavLink></li>
-            <li><NavLink to='/myCraft'>My Craft</NavLink></li>
+            <li><NavLink to='/addCraft'>Add Art</NavLink></li>
+            <li><NavLink to='/myCraft'>My Art</NavLink></li>
             <li>
               <details>
                 <summary>Category</summary>
