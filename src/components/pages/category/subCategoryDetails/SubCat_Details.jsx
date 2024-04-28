@@ -24,7 +24,7 @@ const SubCat_Details = () => {
             
             <div className="flex mt-10 h-[500px] gap-8 border p-10 text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[35%] h-full">
-                    <img src={art.image_url} className="w-[90%] max-h-full mx-auto " />
+                    <img src={art.image} className="w-[90%] max-h-full mx-auto " />
                 </div>
                 <div className="w-[65%] ">
                     <h1 className="text-3xl font-bold mb-8">{art.item_name}</h1>

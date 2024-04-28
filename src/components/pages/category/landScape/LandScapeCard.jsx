@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { CgDollar } from "react-icons/cg";
 import { FcRating } from "react-icons/fc";
 const LandScapeCard = ({art}) => {
-    const {_id,image_url,item_name,price,rating,customization,stockStatus} = art;
+    const {_id,image,item_name,price,rating,customization,stockStatus} = art;
     const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
     return (
         <div className="card text-white shadow-xl bg-slate-200" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <figure className="px-8 pt-10 h-[280px] w-full">
-                <img src={image_url} alt="Shoes" className="rounded-xl h-full w-full" />
+                <img src={image} alt="Shoes" className="rounded-xl h-full w-full" />
             </figure>
            
             <div className="card-body">

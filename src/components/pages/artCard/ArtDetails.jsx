@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import {  useParams } from "react-router-dom";
 import { CgDollar } from "react-icons/cg";
 import { FcRating } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 const ArtDetails = () => {
     const {id} = useParams();
@@ -20,6 +21,9 @@ const ArtDetails = () => {
     
     return (
         <div className="container mx-auto mt-10">
+            <Helmet>
+                <title>Art Details | ArtNest</title>
+            </Helmet>
             <div className="flex h-[500px] gap-8 border p-10 text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="w-[35%] h-full">
                     <img src={art.image_url} className="w-[90%] max-h-full mx-auto " />

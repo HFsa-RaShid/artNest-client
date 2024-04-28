@@ -36,10 +36,10 @@ const HomeCards = () => {
 
     return (
         <div className="container mx-auto ">
-            <div className='App'>
+            <div className='App my-8'>
             <h1 className="mt-16 mb-8 text-center text-3xl font-bold" style={{ paddingTop: '2rem', margin: 'auto 0', fontWeight: 'normal' }}>
             {' '}
-        <span style={{ color: 'green', fontWeight: 'bold' }}>
+        <span style={{  fontWeight: 'bold' }}>
           
           <Typewriter
             words={['PAINTING & DRAWING']}

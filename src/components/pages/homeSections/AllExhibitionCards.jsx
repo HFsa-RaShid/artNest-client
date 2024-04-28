@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ExhibitionCard from './ExhibitionCard';
+import { Helmet } from 'react-helmet';
 
 const AllExhibitionCards = () => {
     const [arts, setArts] = useState([]);
@@ -18,6 +19,9 @@ const AllExhibitionCards = () => {
     }, []);
     return (
         <div className='container mx-auto mt-10 '>
+            <Helmet>
+                <title>Exhibitions | ArtNest</title>
+            </Helmet>
             <h2 className='text-center text-2xl font-bold'>WORLDWIDE EXHIBITIONS</h2>
             <div className="  grid grid-cols-2 gap-10 mt-10">
             
