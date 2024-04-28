@@ -18,6 +18,7 @@ import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
 
 import AllExhibitionCards from "../components/pages/homeSections/AllExhibitionCards";
 import SubCat_Details from "../components/pages/category/subCategoryDetails/SubCat_Details";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -52,12 +53,12 @@ export const router = createBrowserRouter([
         
         {
             path: "/addCraft",
-            element: <AddCraft></AddCraft>,
+            element: <PrivateRoute><AddCraft></AddCraft></PrivateRoute>,
             
         },
         {
             path: "/myCraft",
-            element: <MyCraft></MyCraft>,
+            element: <PrivateRoute><MyCraft></MyCraft> </PrivateRoute>,
             
         },
         {
@@ -92,11 +93,11 @@ export const router = createBrowserRouter([
         },
         {
           path: "/art/:id",
-          element: <ArtDetails></ArtDetails>,
+          element: <PrivateRoute><ArtDetails></ArtDetails></PrivateRoute>,
         },
         {
           path: "/updateArt/:id",
-          element: <UpdateMyArt></UpdateMyArt>,
+          element: <PrivateRoute><UpdateMyArt></UpdateMyArt></PrivateRoute>,
           
         },
         {
