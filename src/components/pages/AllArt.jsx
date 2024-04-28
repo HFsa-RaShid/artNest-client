@@ -1,8 +1,9 @@
+
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllArt = () => {
     const arts = useLoaderData();
-    
+  
     const renderRows = () => {
         return arts.map((art, index) => (
             <tr key={index} className="text-center">

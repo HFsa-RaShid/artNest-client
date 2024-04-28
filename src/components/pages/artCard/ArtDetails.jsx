@@ -18,8 +18,7 @@ const ArtDetails = () => {
     },[id])
     
     return (
-        <div className="container mx-auto">
-            <h1>{art._id}</h1>
+        <div className="container mx-auto mt-10">
             <div className="flex h-[500px] gap-8 bg-slate-200 p-10">
                 <div className="w-[35%] h-full">
                     <img src={art.image_url} className="w-[90%] max-h-full mx-auto " />
