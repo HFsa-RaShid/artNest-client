@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import CartoonDrawCard from "./CartoonDrawingCard/CartoonDrawCard";
-
+import { Helmet } from "react-helmet";
 
 const CartoonDrawing = () => {
     const [arts, setArts] = useState([]);
-    const [showAll, setShowAll] = useState(false);
+    const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
         fetch("http://localhost:5000/subcategory")
@@ -12,25 +12,33 @@ const CartoonDrawing = () => {
             .then((data) => {
                 const cartoonDrawingArts = data.filter(item => item.subcategory_name === "Cartoon Drawing");
                 setArts(cartoonDrawingArts);
-                console.log(cartoonDrawingArts);
+                setLoading(false);
             })
             .catch((error) => {
                 console.error("Error fetching data: ", error);
+                setLoading(false); 
             });
     }, []);
 
-
-
     return (
-        <div>
-             <div className="  grid grid-cols-3 gap-10 mt-10">
-            
-            {arts.map((art) => (
-                <CartoonDrawCard key={art._id} art={art}></CartoonDrawCard>
-            ))}
-          </div>
-
-            
+        <div className="container mx-auto min-h-screen">
+            <Helmet>
+                <title>Cartoon Drawing | ArtNest</title>
+            </Helmet>
+            <h1 className=" mt-10 mb-5 text-3xl text-center font-bold">CARTOON DRAWING</h1>
+            {loading ? ( 
+                <div className="flex justify-center items-center h-screen">
+                    <span className="loading loading-spinner loading-lg"></span>
+                </div>
+            ) : (
+                
+                <div className="grid grid-cols-3 gap-10 mt-10">
+                    
+                    {arts.map((art) => (
+                        <CartoonDrawCard key={art._id} art={art}></CartoonDrawCard>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

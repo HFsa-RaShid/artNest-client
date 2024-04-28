@@ -1,10 +1,11 @@
 
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const AllArt = () => {
     const arts = useLoaderData();
   
-    const renderRows = () => {
+    const Rows = () => {
         return arts.map((art, index) => (
             <tr key={index} className="text-center">
                 <td className="box-border border-2 py-2">{index + 1}</td>
@@ -15,16 +16,19 @@ const AllArt = () => {
                 <td className="box-border border-2">{art.stock_status}</td>
                 <td className="box-border border-2">
                     <Link to={`/art/${art._id}`}>
-                    <button className="text-blue-900 hover:underline font-bold">View Details</button>
+                    <button className="text-blue-400 hover:underline font-bold">View Details</button>
                    </Link>
                 </td> 
             </tr>
         ));
     };
 
-    const renderTableWithBox = () => {
+    const TableBox = () => {
         return (
-            <div className=" border-gray-200 p-4 mt-6">
+            <div className=" border-gray-200 p-4 mt-6 min-h-[calc(100vh-40px)]">
+                <Helmet>
+                <title>All Art | ArtNest</title>
+            </Helmet>
                 <table className="table-auto  w-full">
                     <thead>
                         <tr className="box-border border-2 text-xl">
@@ -38,7 +42,7 @@ const AllArt = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {renderRows()}
+                        {Rows()}
                     </tbody>
                 </table>
             </div>
@@ -47,7 +51,7 @@ const AllArt = () => {
 
     return (
         <div className="container mx-auto">
-            {renderTableWithBox()}
+            {TableBox()}
         </div>
     );
 };

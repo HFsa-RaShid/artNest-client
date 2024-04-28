@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { CgDollar } from "react-icons/cg";
 import { FcRating } from "react-icons/fc";
 const WaterColorCard = ({art}) => {
-    const {_id,image_url,item_name,price,rating,customization,stock_status} = art;
+    const {_id,image_url,item_name,price,rating,customization,stockStatus} = art;
+    const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
+
     return (
-        <div className="card  shadow-xl bg-slate-200">
+        <div className="card text-white shadow-xl bg-slate-200" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <figure className="px-8 pt-10 h-[280px] w-full">
                 <img src={image_url} alt="Shoes" className="rounded-xl h-full w-full" />
             </figure>
@@ -34,7 +36,7 @@ const WaterColorCard = ({art}) => {
                     <p>Customization: {customization}</p>
                     </div>
                     <div>
-                    <p>Stock: {stock_status}</p>
+                    <p>Stock: {stockStatus}</p>
                     </div>
 
                 </div>

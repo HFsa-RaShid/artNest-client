@@ -3,10 +3,10 @@
 
 const ExhibitionCard = ({art}) => {
     const {id,museum_name,location,date,image_url} = art;
-
+    const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
     return (
         
-            <div className="flex bg-slate-100">
+            <div className="flex text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} >
             
             <div className="w-[40%]">
                 <img src={image_url} className="w-full h-full"/>

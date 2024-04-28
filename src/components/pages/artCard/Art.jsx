@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Art = ({art}) => {
     const {_id,image_url,item_name,subcategory_name,price,rating} = art
-    
+    const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
     return (
-        <div className="card  shadow-xl bg-slate-200">
+        <div className="card text-white  shadow-xl bg-slate-200" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <figure className="px-6 pt-6 w-full h-[280px]">
-                    <img src={image_url} className="rounded-xl h-full w-full" />
+                    <img src={image_url} className="rounded-xl border h-full w-full" />
                 </figure>
                 <div className="card-body ">
                     <h2 className="card-title">{item_name}</h2>

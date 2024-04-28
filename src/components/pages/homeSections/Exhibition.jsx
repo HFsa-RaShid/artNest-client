@@ -29,7 +29,7 @@ const Exhibition = () => {
             <div>
                     <div className="flex justify-end mb-5">
                         <Link to='/allExhibitionCard'>
-                        <button className="border border-black px-4 py-2 font-bold">See More...</button>
+                        <button className="border text-black border-black px-4 py-2 font-bold bg-slate-100">See More...</button>
                         </Link>
                     </div>
 

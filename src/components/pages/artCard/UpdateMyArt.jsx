@@ -22,6 +22,7 @@ const UpdateMyArt = () => {
     },[id,control])
 
     const formRef = useRef(null);
+    const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
 
     const handleUpdateArt = e =>{
         e.preventDefault();
@@ -80,14 +81,14 @@ const UpdateMyArt = () => {
 
             <h1 className="text-center mb-5 text-3xl font-bold">UPDATE YOUR ART: {art.item_name}</h1>
         
-                  <form  className="bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleUpdateArt} ref={formRef}>
+                  <form  className="bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleUpdateArt} ref={formRef} style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="grid grid-cols-2 gap-6 ">
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image_url">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="image_url">
                         Image URL
                       </label>
                       <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none  bg-slate-200 focus:shadow-outline"
                         name="image_url"
                         type="text"
                         required
@@ -96,11 +97,11 @@ const UpdateMyArt = () => {
                       />
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="item_name">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="item_name">
                         Item Name
                       </label>
                       <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="item_name"
                         type="text"
                         placeholder="Item Name"
@@ -109,11 +110,11 @@ const UpdateMyArt = () => {
                       />
                     </div>
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subcategory_name">
+                        <label className="block text-white text-sm font-bold mb-2" htmlFor="subcategory_name">
                             Subcategory Name
                         </label>
                         <select
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                             name="subcategory_name"
                             
                             required
@@ -128,11 +129,11 @@ const UpdateMyArt = () => {
                         </select>
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="short_description">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="short_description">
                         Short Description
                       </label>
                       <textarea
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="description"
                         placeholder="Short Description"
                         defaultValue={art.description}
@@ -140,11 +141,11 @@ const UpdateMyArt = () => {
                       ></textarea>
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="price">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="price">
                         Price
                       </label>
                       <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="price"
                         type="text"
                         placeholder="Price"
@@ -153,11 +154,11 @@ const UpdateMyArt = () => {
                       />
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rating">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="rating">
                         Rating
                       </label>
                       <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="rating"
                         type="text"
                         placeholder="Rating"
@@ -166,11 +167,11 @@ const UpdateMyArt = () => {
                       />
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="customization">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="customization">
                         Customization
                       </label>
                       <select
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="customization"
                         defaultValue={art.customization}
                         required
@@ -180,11 +181,11 @@ const UpdateMyArt = () => {
                       </select>
                     </div>
                     <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="processing_time">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="processing_time">
                         Processing Time
                       </label>
                       <input
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="processing_time"
                         type="text"
                         placeholder="Processing Time"
@@ -192,12 +193,12 @@ const UpdateMyArt = () => {
                         required
                       />
                     </div>
-                    <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="stock_status">
+                    <div className="mb-4 col-span-2">
+                      <label className="block text-white text-sm font-bold mb-2" htmlFor="stock_status">
                         Stock Status
                       </label>
                       <select
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        className="bg-slate-200 shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                         name="stock_status"
                         defaultValue={art.stock_status}
                         required
@@ -212,7 +213,7 @@ const UpdateMyArt = () => {
                     </div>
                     <div className="flex items-center justify-between ">
                       <button
-                        className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                        className="bg-black hover:bg-slate-800 border text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
                         type="submit"
                       >
                         UPDATE
