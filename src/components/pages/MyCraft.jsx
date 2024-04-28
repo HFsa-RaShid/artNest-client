@@ -33,7 +33,7 @@ const MyCraft = () => {
         }
     });
     return (
-        <div className=" container mx-auto">
+        <div className=" container mx-auto min-h-screen">
             <div className="   mt-10 mb-5">
                 <label className="block text-gray-700 text-3xl text-center font-bold mb-2" htmlFor="customizationFilter">
                     Filter by Customization
