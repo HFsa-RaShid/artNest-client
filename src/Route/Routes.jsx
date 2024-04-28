@@ -17,6 +17,7 @@ import ArtDetails from "../components/pages/artCard/ArtDetails";
 import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
 
 import AllExhibitionCards from "../components/pages/homeSections/AllExhibitionCards";
+import SubCat_Details from "../components/pages/category/subCategoryDetails/SubCat_Details";
 
 
 
@@ -101,6 +102,10 @@ export const router = createBrowserRouter([
         {
           path: "/allExhibitionCard",
           element: <AllExhibitionCards></AllExhibitionCards>
+        },
+        {
+          path: "/subCategory/:id",
+          element: <SubCat_Details></SubCat_Details>,
         },
           
         

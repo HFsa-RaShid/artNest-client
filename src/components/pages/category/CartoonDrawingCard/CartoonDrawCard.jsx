@@ -37,7 +37,7 @@ const CartoonDrawCard = ({art}) => {
                     </div>
 
                 </div>
-                <Link to={`/updateArt/${_id}`}><button className="w-full bg-slate-500 hover:bg-slate-700 text-white py-2 rounded-xl">View Details</button>
+                <Link to={`/subCategory/${_id}`}><button className="w-full bg-slate-500 hover:bg-slate-700 text-white py-2 rounded-xl">View Details</button>
                     </Link>
                 
                     
