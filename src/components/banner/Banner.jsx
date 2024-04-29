@@ -15,7 +15,7 @@ const Banner = () => {
     
     return (
         <Swiper
-        modules={[ A11y]} 
+        modules={[ Autoplay,A11y]} 
         // Autoplay
         spaceBetween={50}
         slidesPerView={1}

@@ -3,6 +3,8 @@ import {  useParams } from "react-router-dom";
 import { CgDollar } from "react-icons/cg";
 import { FaStar } from 'react-icons/fa';
 import { Helmet } from "react-helmet";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ArtDetails = () => {
     const {id} = useParams();
@@ -18,9 +20,13 @@ const ArtDetails = () => {
             console.log(data);
         })
     },[id])
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
     
     return (
-        <div className="container mx-auto mt-10 mb-10">
+        <div className="container mx-auto mt-10 mb-10" data-aos = "fade-up">
             <Helmet>
                 <title>Art Details | ArtNest</title>
             </Helmet>

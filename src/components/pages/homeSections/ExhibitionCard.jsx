@@ -1,12 +1,19 @@
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 const ExhibitionCard = ({art}) => {
     const {id,museum_name,location,date,image_url} = art;
     const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
+
     return (
         
-            <div className="flex text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} >
+            <div className="flex text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }} data-aos = "fade-up">
             
             <div className="w-[40%]">
                 <img src={image_url} className="w-full h-full"/>

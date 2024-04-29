@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { CgDollar } from "react-icons/cg";
 import { FcRating } from "react-icons/fc";
 import { useParams } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SubCat_Details = () => {
     const {id} = useParams();
@@ -19,8 +20,13 @@ const SubCat_Details = () => {
             console.log(data);
         })
     },[id])
+
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
     return (
-        <div className="container mx-auto mb-10">
+        <div className="container mx-auto mb-10" data-aos = "fade-up">
+            
             
             <div className="md:flex mt-10 h-[1000px] md:h-[500px] gap-8 border p-10 text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <div className="md:w-[35%] h-1/2 md:h-full">

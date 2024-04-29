@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import world from '../../../assets/image/w.jpg'
 import ExhibitionCard from "./ExhibitionCard";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Exhibition = () => {
     const [arts, setArts] = useState([]);
@@ -19,11 +21,13 @@ const Exhibition = () => {
             });
     }, []);
 
-    
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
 
     const renderedArts = showAll ? arts : arts.slice(0, 3);
     return (
-        <div className="mt-16 container mx-auto px-4">
+        <div className="mt-16 container mx-auto px-4"  data-aos = "fade-up">
             <h1 className="text-center font-bold text-xl md:text-3xl mb-7">DISCOVER EXHIBITIONS WORLDWIDE</h1>
             
             <div>

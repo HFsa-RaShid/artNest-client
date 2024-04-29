@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 import { FaStar } from 'react-icons/fa';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const ReviewCard = ({art}) => {
     const {_id,username,rating,comment,image_url} = art;
  
-    
+    useEffect(() => {
+        AOS.init({duration: 2000});
+    }, []);
    
     return (
-        <div className="card card-compact  bg-base-100 shadow-xl">
+        <div className="card card-compact  bg-base-100 shadow-xl" data-aos = "fade-up">
             <figure className="h-[300px]"><img src={image_url} className="w-full" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{username}</h2>

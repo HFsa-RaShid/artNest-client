@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ExhibitionCard from './ExhibitionCard';
 import { Helmet } from 'react-helmet';
 
+
 const AllExhibitionCards = () => {
     const [arts, setArts] = useState([]);
     const [showAll, setShowAll] = useState(false);
@@ -17,8 +18,11 @@ const AllExhibitionCards = () => {
                 console.error("Error fetching data: ", error);
             });
     }, []);
+
+    
+    
     return (
-        <div className='container mx-auto my-10 px-4'>
+        <div className='container mx-auto my-10 px-4' >
             <Helmet>
                 <title>Exhibitions | ArtNest</title>
             </Helmet>

@@ -7,7 +7,6 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-
 const MyCraft = () => {
     const { user } = useContext(AuthContext);
     const [items, setItems] = useState([]);
@@ -75,8 +74,10 @@ const MyCraft = () => {
         });
     };
 
+   
+
     return (
-        <div className="container mx-auto min-h-screen mb-10">
+        <div className="container mx-auto min-h-screen mb-10" >
             <Helmet>
                 <title>My Art | ArtNest</title>
             </Helmet>

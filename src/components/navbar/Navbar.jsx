@@ -1,9 +1,7 @@
 import { useContext, useEffect, useState} from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-
 import 'animate.css';
 import { AuthContext } from "../../Provider/AuthProvider";
-
 import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
@@ -38,6 +36,9 @@ const Navbar = () => {
   document.querySelector("html").setAttribute("data-theme",localTheme);
 
  },[theme])
+
+
+
 
     return (
         <div className="sticky top-0 z-50  shadow-2xl bg-black">
