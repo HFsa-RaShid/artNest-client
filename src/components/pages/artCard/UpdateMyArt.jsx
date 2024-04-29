@@ -12,7 +12,7 @@ const UpdateMyArt = () => {
     const [control,setControl] =useState(false);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/arts/${id}`)
+        fetch(`https://art-nest-server.vercel.app/arts/${id}`)
         .then(res => res.json())
         .then(data => {
             setArt(data);
@@ -40,7 +40,7 @@ const UpdateMyArt = () => {
         console.log(updatedArt);
 
         // send data to the server
-        fetch(`http://localhost:5000/arts/${art._id}`,{
+        fetch(`https://art-nest-server.vercel.app/arts/${art._id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

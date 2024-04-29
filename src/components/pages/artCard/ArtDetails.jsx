@@ -13,7 +13,7 @@ const ArtDetails = () => {
     const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/arts/${id}`)
+        fetch(`https://art-nest-server.vercel.app/arts/${id}`)
         .then(res => res.json())
         .then(data => {
             setArt(data)

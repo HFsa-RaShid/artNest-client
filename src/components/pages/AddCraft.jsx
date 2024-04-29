@@ -27,7 +27,7 @@ const AddCraft = () => {
         console.log(newAddArt);
 
         // send data to the server
-        fetch('http://localhost:5000/art',{
+        fetch('https://art-nest-server.vercel.app/art',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

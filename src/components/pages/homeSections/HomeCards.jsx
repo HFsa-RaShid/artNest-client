@@ -8,7 +8,7 @@ const HomeCards = () => {
     const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        fetch("http://localhost:5000/art")
+        fetch("https://art-nest-server.vercel.app/art")
             .then((res) => res.json())
             .then((data) => {
                 setArts(data);

@@ -7,7 +7,7 @@ const CharcoalSketching = () => {
     const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        fetch("http://localhost:5000/subcategory")
+        fetch("https://art-nest-server.vercel.app/subcategory")
             .then((res) => res.json())
             .then((data) => {
                 const charcoalSketchingArts = data.filter(item => item.subcategory_name === "Charcoal Sketching");

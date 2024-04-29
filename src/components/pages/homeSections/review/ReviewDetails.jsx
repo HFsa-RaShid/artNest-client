@@ -9,7 +9,7 @@ const ReviewDetails = () => {
     const ImageUrl = "https://i.ibb.co/Zx9JR3q/card.jpg"
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/review/${id}`)
+        fetch(`https://art-nest-server.vercel.app/review/${id}`)
         .then(res => res.json())
         .then(data => {
             setArt(data)

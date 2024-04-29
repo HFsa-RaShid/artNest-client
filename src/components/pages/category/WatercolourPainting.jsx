@@ -7,7 +7,7 @@ const WatercolourPainting = () => {
     const [loading, setLoading] = useState(true); 
 
     useEffect(() => {
-        fetch("http://localhost:5000/subcategory")
+        fetch("https://art-nest-server.vercel.app/subcategory")
             .then((res) => res.json())
             .then((data) => {
             

@@ -7,7 +7,7 @@ const PortraitDrawing = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/subcategory")
+        fetch("https://art-nest-server.vercel.app/subcategory")
             .then((res) => res.json())
             .then((data) => {
                 const portraitDrawingArts = data.filter(item => item.subcategory_name === "Portrait Drawing");

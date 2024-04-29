@@ -19,7 +19,7 @@ const MyCraft = () => {
 
     useEffect(() => {
         setLoading(true); 
-        fetch(`http://localhost:5000/myArt/${user?.email}`)
+        fetch(`https://art-nest-server.vercel.app/myArt/${user?.email}`)
         .then((res) => res.json())
         .then(data => {
             setItems(data);
@@ -55,7 +55,7 @@ const MyCraft = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/art/${_id}`,{
+                fetch(`https://art-nest-server.vercel.app/art/${_id}`,{
                     method: 'DELETE'
                 })
                 .then( res => res.json())

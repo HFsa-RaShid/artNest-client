@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
         {
             path: "/allArt",
             element: <AllArt></AllArt>,
-            loader: () => fetch('http://localhost:5000/art')
+            loader: () => fetch('https://art-nest-server.vercel.app/art')
         },
         
         {
