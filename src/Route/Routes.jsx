@@ -21,6 +21,8 @@ import SubCat_Details from "../components/pages/category/subCategoryDetails/SubC
 import PrivateRoute from "./PrivateRoute";
 import ReviewDetails from "../components/pages/homeSections/review/ReviewDetails";
 import AllReviews from "../components/pages/homeSections/review/AllReviews";
+import UserProfile from "../components/navbar/my profile/UserProfile";
+import UpdateProfile from "../components/navbar/my profile/update profile/UpdateProfile";
 
 
 
@@ -117,6 +119,14 @@ export const router = createBrowserRouter([
         {
           path: "/allReview",
           element: <AllReviews></AllReviews>
+        },
+        {
+          path: "/userProfile",
+          element: <UserProfile></UserProfile>
+        },
+        {
+          path: "/updateProfile",
+          element: <UpdateProfile></UpdateProfile>
         },
         
       ],
