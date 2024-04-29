@@ -61,15 +61,15 @@ const AddCraft = () => {
         
             
             
-                <div className="w-[80%] mx-auto mt-10 "  >
+                <div className="w-full md:w-[80%]  mt-10 px-4 container mx-auto"  >
                     <Helmet>
                 <title>Add Art | ArtNest</title>
             </Helmet>
 
             <h1 className="text-center mb-5 text-3xl font-bold">ADD YOUR ART</h1>
         
-                  <form  className=" shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleAddArt} ref={formRef} style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className="grid grid-cols-2 gap-6 ">
+                  <form  className=" shadow-md rounded px-8 pt-6 pb-8 mb-4 " onSubmit={handleAddArt} ref={formRef} style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className=" grid grid-cols-2 gap-5">
                     <div className="mb-4">
                       <label className="block text-white text-sm font-bold mb-2" htmlFor="image_url">
                         Image URL
@@ -213,7 +213,7 @@ const AddCraft = () => {
                     </div>
                     
                     </div>
-                    <div className="flex items-center justify-between ">
+                    <div className="flex items-center justify-between col-span-2">
                       <button
                         className="bg-black border hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
                         type="submit"

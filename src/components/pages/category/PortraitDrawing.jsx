@@ -31,7 +31,7 @@ const PortraitDrawing = () => {
                     <span className="loading loading-spinner loading-lg"></span> 
                 </div>
             ) : (
-                <div className="grid grid-cols-3 gap-10 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
                     {arts.map((art) => (
                         <PortraitCard key={art._id} art={art}></PortraitCard>
                     ))}

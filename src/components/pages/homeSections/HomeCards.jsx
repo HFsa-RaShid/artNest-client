@@ -26,37 +26,30 @@ const HomeCards = () => {
     const renderedArts = showAll ? arts : arts.slice(0, 6);
 
 
-    const handleType = (count) => {
-        // console.log(count);
-      }
     
-      const handleDone = () => {
-        // console.log(`Done after 5 loops!`)
-      }
 
     return (
         <div className="container mx-auto ">
             <div className='App my-8'>
-            <h1 className="mt-16 mb-8 text-center text-3xl font-bold" style={{ paddingTop: '2rem', margin: 'auto 0', fontWeight: 'normal' }}>
-            {' '}
+            <h1 className="mt-16 mb-8 text-center text-xl md:text-3xl font-bold" style={{ paddingTop: '2rem', margin: 'auto 0', fontWeight: 'bold' }}>
+            {'PAINTING '}
         <span style={{  fontWeight: 'bold' }}>
           
           <Typewriter
-            words={['PAINTING & DRAWING']}
+            words={[' & DRAWING LIST']}
             loop={true}
             cursor
             cursorStyle='|'
-            typeSpeed={70}
+            typeSpeed={100}
             deleteSpeed={50}
             delaySpeed={1000}
-            onLoopDone={handleDone}
-            onType={handleType}
+           
           />
         </span>
       </h1>
     </div>
             
-            <div className="grid grid-cols-3 gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 px-4">
                 {renderedArts.map((art) => (
                     <Art key={art._id} art={art} />
                 ))}

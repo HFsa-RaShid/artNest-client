@@ -20,13 +20,13 @@ const SubCat_Details = () => {
         })
     },[id])
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-10">
             
-            <div className="flex mt-10 h-[500px] gap-8 border p-10 text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                <div className="w-[35%] h-full">
+            <div className="md:flex mt-10 h-[1000px] md:h-[500px] gap-8 border p-10 text-white" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="md:w-[35%] h-1/2 md:h-full">
                     <img src={art.image} className="w-[90%] max-h-full mx-auto " />
                 </div>
-                <div className="w-[65%] ">
+                <div className="md:w-[65%] ">
                     <h1 className="text-3xl font-bold mb-8">{art.item_name}</h1>
                     <p className="text-xl font-bold my-2">{art.subcategory_name}</p>
                     <p className=" my-6"><span className="text-[18px] font-bold ">Description:</span> {art.

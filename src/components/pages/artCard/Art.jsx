@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { CgDollar } from "react-icons/cg";
-import { FcRating } from "react-icons/fc";
+import { FaStar } from 'react-icons/fa';
 
 
 const Art = ({art}) => {
@@ -29,7 +29,7 @@ const Art = ({art}) => {
 
                         </div>
                         <div className="flex gap-1 items-center">
-                        <FcRating />
+                        <FaStar color="gold" />
                         <p>{rating}</p>
 
                         </div>

@@ -3,7 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { CgDollar } from "react-icons/cg";
-import { FcRating } from "react-icons/fc";
+import { FaStar } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -76,7 +76,7 @@ const MyCraft = () => {
     };
 
     return (
-        <div className="container mx-auto min-h-[calc(100vh-40px)]">
+        <div className="container mx-auto min-h-screen mb-10">
             <Helmet>
                 <title>My Art | ArtNest</title>
             </Helmet>
@@ -97,11 +97,11 @@ const MyCraft = () => {
             </div>
 
             {loading ? (
-                <div className="flex justify-center items-center h-screen">
+                <div className="flex justify-center items-center h-screen ">
                     <span className="loading loading-spinner loading-lg"></span>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 fonts container mx-auto">
+                <div className="px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 fonts container mx-auto">
                     {filteredItems.map(item => (
                         <div key={item._id} className="card text-white shadow-xl" style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                             <figure className="px-8 pt-10 h-[280px] w-full">
@@ -115,7 +115,7 @@ const MyCraft = () => {
                                         <p>{item.price}</p>
                                     </div>
                                     <div className="flex gap-1 items-center">
-                                        <FcRating />
+                                    <FaStar color="gold" />
                                         <p>{item.rating}</p>
                                     </div>
                                 </div>

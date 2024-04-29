@@ -79,7 +79,7 @@ const UpdateMyArt = () => {
                 <title>Update Art | ArtNest</title>
             </Helmet>
 
-            <h1 className="text-center mb-5 text-3xl font-bold">UPDATE YOUR ART: {art.item_name}</h1>
+            <h1 className="text-center mb-5 text-2xl md:text-3xl font-bold">UPDATE YOUR ART: {art.item_name}</h1>
         
                   <form  className="bg-slate-200 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleUpdateArt} ref={formRef} style={{ backgroundImage: `url(${ImageUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="grid grid-cols-2 gap-6 ">

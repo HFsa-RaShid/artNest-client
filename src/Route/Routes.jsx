@@ -19,6 +19,8 @@ import UpdateMyArt from "../components/pages/artCard/UpdateMyArt";
 import AllExhibitionCards from "../components/pages/homeSections/AllExhibitionCards";
 import SubCat_Details from "../components/pages/category/subCategoryDetails/SubCat_Details";
 import PrivateRoute from "./PrivateRoute";
+import ReviewDetails from "../components/pages/homeSections/review/ReviewDetails";
+import AllReviews from "../components/pages/homeSections/review/AllReviews";
 
 
 
@@ -108,7 +110,14 @@ export const router = createBrowserRouter([
           path: "/subCategory/:id",
           element: <SubCat_Details></SubCat_Details>,
         },
-          
+        {
+          path: "/review/:id",
+          element: <PrivateRoute><ReviewDetails></ReviewDetails></PrivateRoute>
+        },
+        {
+          path: "/allReview",
+          element: <AllReviews></AllReviews>
+        },
         
       ],
     },

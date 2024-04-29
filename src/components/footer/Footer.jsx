@@ -3,12 +3,13 @@
 const Footer = () => {
     return (
      
-      <footer className="footer p-10 bg-black text-neutral-content  mt-20">
+      <footer className="footer p-10 bg-black text-neutral-content ">
       <aside>
         
-        <h1 className=" font-bold text-[18px] mb-2"><span className="text-4xl font-bold bg-white text-black">Art</span>Nest</h1>
-        <p>Providing reliable tech since 2024</p>
+        <h1 className=" font-bold text-[18px] mb-2"><span className="text-3xl font-bold bg-white text-black">Art</span>Nest</h1>
+        <p>Providing reliable arts since 2024</p>
         <p>Contact: +880 1725768900</p>
+        <p>E-mail: artnest@gmail.com</p>
       </aside> 
       <nav>
         <h6 className="footer-title">Social</h6> 

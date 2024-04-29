@@ -99,8 +99,7 @@ const handleGithubLogIn = () =>{
       <div className="hero " style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${registerBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <Helmet>
                 <title>Sign In | ArtNest</title>
-            </Helmet>
-        
+        </Helmet>
         
         <div className="hero-content flex-col w-[400px] md:w-[500px] ">
           

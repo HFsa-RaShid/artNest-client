@@ -23,15 +23,17 @@ const AllArt = () => {
         ));
     };
 
-    const TableBox = () => {
-        return (
+
+    return (
+        <div className="container mx-auto">
+            
             <div className=" border-gray-200 p-4 mt-6 min-h-[calc(100vh-40px)]">
                 <Helmet>
                 <title>All Art | ArtNest</title>
             </Helmet>
-                <table className="table-auto  w-full">
+                <table className=" px-4 w-full">
                     <thead>
-                        <tr className="box-border border-2 text-xl">
+                        <tr className="box-border border-2 text-[10px] md:text-xl">
                             <th className="py-3">Serial Number</th>
                             <th>Item Name</th>
                             <th>Subcategory Name</th>
@@ -41,17 +43,11 @@ const AllArt = () => {
                             <th>Details</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="text-[12px] md:text-[18px]">
                         {Rows()}
                     </tbody>
                 </table>
             </div>
-        );
-    };
-
-    return (
-        <div className="container mx-auto">
-            {TableBox()}
         </div>
     );
 };
