@@ -22,6 +22,7 @@
 + Toasts/Sweet Alerts: Utilize notifications for important actions such as successful login, registration, item addition, or error messages.
 + Worldwide Exhibition Section: Highlight upcoming art & craft exhibitions worldwide, providing users with valuable information and opportunities for participation or attendance.
 + Review Section: Allow users to leave reviews and ratings for art & craft items, facilitating community engagement and feedback.
++ User Profile: user can see his/her information and photo and he/she can change photo
 
 # Package:
 + React-simple-typewriter
