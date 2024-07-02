@@ -26,8 +26,8 @@ const Banner = () => {
             <div className='flex h-[550px] relative'>
             <div className="absolute inset-0 w-[40%] bg-black shadow-[rgba(0,0,5,50)_0px_0px_100px_100px]">
                 <div className='absolute top-[25%] left-[10%] '>
-                    <h1 className='text-white text-3xl md:text-4xl lg:text-5xl'>Unleash Your Inner Artist...</h1>
-                    <p className='text-white md:text-[18px] py-6'> Elevate Your Space with Handcrafted Creations</p>
+                    <h1 className='text-white text-5xl'>Unleash Your Inner Artist...</h1>
+                    <p className='text-white text-[18px] py-6'> Elevate Your Space with Handcrafted Creations</p>
                
                 </div>
             </div>

@@ -1,29 +1,46 @@
 # Website Name: ArtNest
-# Category: Painting and Drawing
-# [Live URL] (https://assignment10-artnest.web.app/)
+# [Server Github] (https://github.com/HFsa-RaShid/artNest-server)
 
 
-# Features:
+# Concept and Problem Solved
+ArtNest is an inclusive online platform designed for art enthusiasts to showcase, explore, and manage art & craft items. It provides a centralized space where users can seamlessly interact with art through various core functionalities.
 
-+ Multi-Platform Authentication: Enable login and registration via email/password, Google, GitHub, Facebook, or Twitter.
-+ User Profile Integration: Display user-specific content in the navbar upon login, including photo and name, with a logout option.
-+ CRUD Operations: Allow users to Add, View, Update, and Delete art & craft items with intuitive interfaces and feedback mechanisms.
-+ Data Organization: Categorize items by subcategories and enable browsing based on these categories.
-+ Dynamic Content Display: Showcase art & craft items with relevant details across various pages using cards or tables.
-+ Private/Protected Routes: Ensure security by restricting access to certain pages based on user authentication status.
-+ Form Validation: Validate user input for registration and item addition, providing clear error messages for invalid entries.
-+ Filtering and Sorting: Implement functionality to filter and sort items based on criteria such as price, rating, or category.
-+ User-Specific Views: Allow users to see their own added items in a personalized list, with options to update or delete them.
-+ Responsive Design: Ensure compatibility across devices and screen sizes for a seamless user experience.
-+ Loading State Feedback: Display a loading spinner or indicator to notify users when data is being fetched or processed.
-+ 404 Page: Create a custom 404 page for handling non-existent URLs and guiding users back to the main site.
-+ Footer Information: Include relevant details such as website name, copyright, contact information, and social media links in the footer.
-+ Dark/Light Theme Toggle: Offer users the option to switch between dark and light themes for improved accessibility and preference.
-+ Toasts/Sweet Alerts: Utilize notifications for important actions such as successful login, registration, item addition, or error messages.
-+ Worldwide Exhibition Section: Highlight upcoming art & craft exhibitions worldwide, providing users with valuable information and opportunities for participation or attendance.
-+ Review Section: Allow users to leave reviews and ratings for art & craft items, facilitating community engagement and feedback.
-+ User Profile: user can see his/her information and photo and he/she can change photo
+# Key Features
++ Multi-Platform Authentication
+  + Versatile Login Options: Users can sign up and log in using email/password, Google, GitHub, Facebook, or Twitter.
+  + Secure Access Control: Implements JWT authentication for secure user sessions and data protection.
++ Comprehensive CRUD Operations
+  + User-Friendly Interfaces: Enables users to Add, View, Update, and Delete art & craft items effortlessly.
+  + Intuitive Feedback: Provides clear and immediate feedback for actions such as item addition, updates, or deletions.
++ Responsive Design
+  + Cross-Device Compatibility: Ensures a seamless and consistent user experience across mobile, tablet, and desktop devices.
+  + Enhanced Accessibility: Adapts to various screen sizes and resolutions, making the platform accessible to a wider audience.
 
-# Package:
-+ React-simple-typewriter
-+ React-tooltip
+# Technologies Used
++ Frontend: HTML, CSS, Tailwind CSS, JavaScript, React.js
++ Backend: Node.js, Express.js
++ Database: MongoDB
++ Authentication: Firebase, JWT
++ Animations: AOS (Animate on Scroll)
+
+# Local Setup Guide
+To run EduConnect locally on your machine, follow these steps:
++ Clone the Client Repository:
+  + git clone https://github.com/HFsa-RaShid/artNest-client.git
+  + cd artNest-client
+
++ Clone the server Repository:
+  + git clone https://github.com/HFsa-RaShid/artNest-server.git
+  + cd artNest-server
+
++ Install Dependencies:
+  + npm install
+
++ Set Environment Variables:
+  + Create a .env file in the root directory and configure necessary environment variables such as database connection URI, JWT secret key, and Auth credentials.
+
++ Start the Server:
+  + Install nodemon globally (if you haven't already):npm install -g nodemon
+
++ Access the Application:
+  + Open your web browser and navigate to http://localhost:5000  to access the locally running instance of ArtNest.
